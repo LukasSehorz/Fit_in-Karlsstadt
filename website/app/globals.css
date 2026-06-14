@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  /* Farbwelt Fit-in — reines Weiß als Grundton, Blau als Charakter, Rot als Akzent */
+  --color-cream: #f4f7fc;   /* Body-Grundton, kühles Weiß */
+  --color-paper: #ffffff;   /* reines Weiß für Karten & Text auf Dunkel */
+  --color-sage: #e9f1fb;    /* sehr helles Blau, Sektionshintergrund */
+  --color-sage-deep: #c4d8f0; /* helles Blau, Deko & große Ziffern */
+  --color-forest: #143a66;  /* tiefes Blau, dunkle Sektionen & Footer */
+  --color-pine: #1c5491;    /* mittleres Blau, Kicker & Hover */
+  --color-leaf: #2c79c4;    /* Fit-in-Blau, Akzente/Icons/Focus */
+  --color-leaf-soft: #8fbce4; /* helles Blau auf dunklen Flächen */
+  --color-ink: #16202e;     /* fast Schwarz, kühl */
+  --color-mist: #5b6b7d;    /* gedämpftes Blaugrau, Sekundärtext */
+
+  /* Rot als zweite Akzentfarbe (wie das Fit-in-Logo) */
+  --color-accent: #cc3330;
+  --color-accent-soft: #e25b57;
+  --color-accent-dark: #ad2723;
+
+  --font-display: "Sentient", "Georgia", "Times New Roman", serif;
+  --font-body: "Switzer", "Segoe UI", "Helvetica Neue", sans-serif;
+
+  --animate-marquee: marquee 42s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-body text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-leaf);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  /* Baseline für alle interaktiven Elemente, ein System statt Einzelfälle */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-cream active:scale-[0.97];
+  }
+
+  .btn-lg {
+    @apply px-8 py-4;
+  }
+
+  .btn-primary {
+    @apply bg-forest text-paper hover:bg-pine;
+  }
+
+  .btn-light {
+    @apply bg-paper text-forest hover:bg-sage;
+  }
+
+  .btn-outline {
+    @apply border border-ink/15 bg-transparent text-ink hover:border-leaf/60 hover:text-pine;
+  }
+
+  .btn-outline-light {
+    @apply border border-cream/30 bg-transparent text-cream hover:border-cream/70 hover:bg-cream/10;
+  }
+
+  .link-quiet {
+    @apply rounded-sm transition-colors duration-200 hover:text-pine focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf;
+  }
+}
+
+@layer utilities {
+  /* Feines Filmkorn für Tiefe auf großen Flächen */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Bogenform für Bilder, ruhig und organisch */
+  .arch {
+    border-radius: calc(infinity * 1px) calc(infinity * 1px) 1.25rem 1.25rem;
+  }
+
+  .hairline {
+    border-color: color-mix(in srgb, var(--color-ink) 12%, transparent);
+  }
+
+  .hairline-light {
+    border-color: color-mix(in srgb, var(--color-cream) 18%, transparent);
+  }
+
+  /* Fließende Displaygrößen */
+  .text-display-xl {
+    font-size: clamp(2.75rem, 1.2rem + 6.2vw, 6.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-lg {
+    font-size: clamp(2.25rem, 1rem + 4.4vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.018em;
+  }
+
+  .text-display-md {
+    font-size: clamp(1.75rem, 1rem + 2.6vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.014em;
+  }
+
+  .text-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}

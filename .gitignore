@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Next.js build / cache
+.next/
+out/
+build/
+dist/
+
+# Lokale Tooling- & Scratch-Ordner
+.claude/
+.firecrawl/
+
+# Generierte Screenshots
+.shots/*.png
+
+# Logs & Temp
+*.log
+npm-debug.log*
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
