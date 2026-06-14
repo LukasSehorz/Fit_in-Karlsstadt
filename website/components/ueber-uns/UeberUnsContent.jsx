@@ -130,6 +130,31 @@ export default function UeberUnsContent() {
               </p>
             </FadeUp>
           </div>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-16 md:gap-8">
+            <FadeUp delay={0.15}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/anspruch-1.png"
+                  alt="Therapeutische Hände begleiten eine Patientin behutsam durch die Behandlung"
+                  fill
+                  sizes="(min-width: 640px) 45vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.25}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl sm:mt-10">
+                <Image
+                  src="/images/anspruch-2.png"
+                  alt="Ruhiges Beratungsgespräch zwischen Therapeutin und Patientin"
+                  fill
+                  sizes="(min-width: 640px) 45vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
 

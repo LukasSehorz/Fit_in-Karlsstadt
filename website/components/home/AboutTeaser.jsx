@@ -16,7 +16,7 @@ export default function AboutTeaser() {
           <FadeUp className="relative mx-auto w-full max-w-sm lg:mx-0">
             <div className="arch relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/praxis-1.webp"
+                src="/images/praxis-1-portrait.png"
                 alt="Behandlungsraum der Physiotherapie im Fit-in Gesundheitszentrum"
                 fill
                 sizes="(min-width: 1024px) 32vw, 80vw"

@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { contact } from "@/lib/data";
+import { contact, leistungsGruppen } from "@/lib/data";
 import { EASE, SplitWords } from "@/components/motion";
 import Grasses from "@/components/Grasses";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden px-5 pb-20 pt-32 md:px-8 md:pb-28 md:pt-44">
+    <section className="relative isolate overflow-hidden px-5 pb-16 pt-24 md:px-8 md:pb-20 md:pt-28">
       {/* Hintergrundbild der Hero-Section */}
       <div className="absolute inset-0 -z-10">
         <motion.div
@@ -39,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
-            className="text-kicker mb-8 text-pine"
+            className="text-kicker mb-6 text-pine"
           >
             Physiotherapie · Reha · Rehasport · Karlstadt
           </motion.p>
@@ -51,17 +51,22 @@ export default function Hero() {
             delay={0.5}
           />
 
-          <motion.p
+          <motion.ul
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1.1, ease: EASE }}
-            className="mt-8 max-w-lg text-lg leading-relaxed text-mist"
+            className="mt-8 max-w-lg space-y-3.5"
           >
-            In der Physiotherapie des Fit-in Gesundheitszentrums setzt ein
-            eingespieltes Team aus Physiotherapeuten und einer Masseurin Ihre
-            verordnete Therapie um. Während Ihrer gesamten Behandlungsserie
-            sind Sie dabei in der Hand eines einzelnen Therapeuten.
-          </motion.p>
+            {leistungsGruppen.map((gruppe) => (
+              <li key={gruppe.id} className="flex items-start gap-3">
+                <CheckIcon className="mt-1 size-5 shrink-0 text-leaf" />
+                <span className="text-lg leading-snug text-ink">
+                  <span className="font-medium">{gruppe.titel}</span>
+                  <span className="text-mist"> — {gruppe.claim}</span>
+                </span>
+              </li>
+            ))}
+          </motion.ul>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +87,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.6 }}
-            className="mt-16 flex gap-10 border-t hairline pt-6"
+            className="mt-10 flex gap-10 border-t hairline pt-6"
           >
             <div>
               <dt className="text-kicker text-mist">Leistungen</dt>
@@ -107,6 +112,14 @@ function ArrowRight({ className }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden>
       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12l-7.5 7.5M21 12H3" />
+    </svg>
+  );
+}
+
+function CheckIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.5 5 5 10-11" />
     </svg>
   );
 }

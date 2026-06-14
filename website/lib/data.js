@@ -83,7 +83,7 @@ export const leistungsGruppen = [
     claim: "Präventions- und Rehasport in der Gemeinschaft",
     intro:
       "Über den Präventions- und Rehasportverein Karlstadt e.V. mit Geschäftsstelle im Fit-in bieten wir Rehabilitations- und Präventionssport in der Gruppe an. Weitere Informationen finden Sie unter rehasport-karlstadt.de.",
-    bild: "/images/hero-behandlung.png",
+    bild: "/images/rehasport-gruppe.png",
     bildAlt: "Bewegung in der Gruppe in ruhiger Atmosphäre",
     leistungen: [
       {
@@ -148,7 +148,7 @@ export const featuredLeistungen = [
   {
     name: "Rehasportverein",
     text: "Präventions- und Rehabilitationssport in der Gruppe über den Verein mit Sitz im Fit-in.",
-    bild: "/images/hero-behandlung.png",
+    bild: "/images/rehasport-gruppe.png",
     bildAlt: "Bewegung in der Gruppe",
     href: "/leistungen#rehasportverein",
   },

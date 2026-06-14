@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { contact } from "@/lib/data";
@@ -52,15 +53,17 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <Link
             href="/"
-            className="link-quiet shrink-0 leading-none"
+            className="link-quiet shrink-0"
             aria-label="Fit-in Gesundheitszentrum, zur Startseite"
           >
-            <span className="block font-display text-2xl tracking-tight text-forest md:text-3xl">
-              Fit-<span className="text-accent">in</span>
-            </span>
-            <span className="text-kicker block text-[0.6rem] text-pine md:text-xs">
-              Gesundheitszentrum
-            </span>
+            <Image
+              src="/images/logo-fitin.jpg"
+              alt="Präventions- und Rehasportverein Karlstadt e.V. – Fit-in Gesundheitszentrum"
+              width={1000}
+              height={405}
+              priority
+              className="h-12 w-auto md:h-14"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Hauptnavigation">
