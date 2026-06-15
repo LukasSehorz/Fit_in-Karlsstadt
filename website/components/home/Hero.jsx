@@ -19,7 +19,7 @@ export default function Hero() {
           className="h-full w-full"
         >
           <Image
-            src="/images/hero-bg.png"
+            src="/images/hero-bg-v2.jpg"
             alt="Physiotherapeutische Behandlung im Fit-in Gesundheitszentrum"
             fill
             priority

@@ -76,7 +76,7 @@ export default function UeberUnsContent() {
                 className="h-full w-full"
               >
                 <Image
-                  src="/images/hero-behandlung.png"
+                  src="/images/hero-behandlung-v2.jpg"
                   alt="Physiotherapeutische Behandlung im Fit-in Gesundheitszentrum"
                   fill
                   priority

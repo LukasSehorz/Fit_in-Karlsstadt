@@ -15,6 +15,17 @@ export const contact = {
   webHref: "https://www.fit-in-karlstadt.de",
 };
 
+export const oeffnungszeiten = [
+  { tag: "Mo – Do", zeit: "07:00 – 22:00" },
+  { tag: "Freitag", zeit: "07:00 – 21:00" },
+  { tag: "Samstag", zeit: "09:00 – 18:00" },
+  { tag: "Sonntag", zeit: "09:00 – 18:00" },
+  { tag: "Feiertage", zeit: "09:00 – 18:00" },
+];
+
+// Standort des Fit-in Gesundheitszentrums, Am Steinlein 6, Karlstadt
+export const geo = { lat: 49.954916, lng: 9.780518 };
+
 export const leistungsGruppen = [
   {
     id: "physiotherapie",
@@ -59,7 +70,7 @@ export const leistungsGruppen = [
     claim: "Der sichere Übergang von der Reha ins Training",
     intro:
       "Um den Übergang von der Krankengymnastik- bzw. Rehaphase in eine allgemeine, „normale“ Trainingsphase zu ermöglichen, bieten wir Ihnen an dieser Schnittstelle einen besonderen Service: In enger Absprache mit unseren Physiotherapeuten erstellen die Verantwortlichen für den Fitnessbereich einen fortführenden Trainingsplan.",
-    bild: "/images/trainingstherapie.png",
+    bild: "/images/trainingstherapie-v2.jpg",
     bildAlt: "Geführtes Training mit dem Widerstandsband auf der Therapiebank",
     leistungen: [
       {
@@ -83,7 +94,7 @@ export const leistungsGruppen = [
     claim: "Präventions- und Rehasport in der Gemeinschaft",
     intro:
       "Über den Präventions- und Rehasportverein Karlstadt e.V. mit Geschäftsstelle im Fit-in bieten wir Rehabilitations- und Präventionssport in der Gruppe an. Weitere Informationen finden Sie unter rehasport-karlstadt.de.",
-    bild: "/images/rehasport-gruppe.png",
+    bild: "/images/rehasport-gruppe-v2.jpg",
     bildAlt: "Bewegung in der Gruppe in ruhiger Atmosphäre",
     leistungen: [
       {
@@ -107,7 +118,7 @@ export const leistungsGruppen = [
     claim: "Die Gebrauchsanweisung für den menschlichen Körper",
     intro:
       "Spiraldynamik® ist ein evolutionsgeschichtlich und anatomisch begründetes Bewegungs- und Therapiekonzept. Aus dem natürlichen Bauprinzip der Verschraubung lässt sich ein koordinierter, gesunder Gebrauch des Körpers von Kopf bis Fuß ableiten – so wird gesunde Bewegung verständlich und lernbar.",
-    bild: "/images/kinesiology.png",
+    bild: "/images/kinesiology-v2.jpg",
     bildAlt: "Analyse und Schulung gesunder Bewegungsmuster",
     leistungen: [
       {
@@ -141,21 +152,21 @@ export const featuredLeistungen = [
   {
     name: "Reha-Training",
     text: "Der begleitete Übergang von der Rehaphase in ein dauerhaftes, individuelles Training.",
-    bild: "/images/trainingstherapie.png",
+    bild: "/images/trainingstherapie-v2.jpg",
     bildAlt: "Training mit Widerstandsband",
     href: "/leistungen#reha-training",
   },
   {
     name: "Rehasportverein",
     text: "Präventions- und Rehabilitationssport in der Gruppe über den Verein mit Sitz im Fit-in.",
-    bild: "/images/rehasport-gruppe.png",
+    bild: "/images/rehasport-gruppe-v2.jpg",
     bildAlt: "Bewegung in der Gruppe",
     href: "/leistungen#rehasportverein",
   },
   {
     name: "Spiraldynamik®",
     text: "Ein Bewegungs- und Therapiekonzept, das gesunde Bewegung verständlich und lernbar macht.",
-    bild: "/images/kinesiology.png",
+    bild: "/images/kinesiology-v2.jpg",
     bildAlt: "Schulung gesunder Bewegungsmuster",
     href: "/leistungen#spiraldynamik",
   },

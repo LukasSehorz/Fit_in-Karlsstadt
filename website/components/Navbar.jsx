@@ -12,7 +12,7 @@ const links = [
   { href: "/", label: "Start" },
   { href: "/leistungen", label: "Leistungen" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {
