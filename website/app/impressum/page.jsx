@@ -70,6 +70,17 @@ export default function ImpressumPage() {
               Aufsichtsbehörde zu ergänzen.
             </p>
           </div>
+
+          <div>
+            <h2 className="text-kicker mb-4 text-pine">
+              Hinweis zu KI-generierten Inhalten
+            </h2>
+            <p>
+              Teile der Inhalte dieser Website (Texte und Bilder) wurden mit
+              Unterstützung von künstlicher Intelligenz erstellt und
+              redaktionell geprüft.
+            </p>
+          </div>
         </div>
       </div>
     </section>
